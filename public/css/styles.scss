@@ -1,0 +1,414 @@
+/*---------VARIABLES--------*/
+
+$color-menu: #ffffff;
+$color-azul: #22263d;
+$color-verde: #3de200;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Montserrat", sans-serif;
+
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+/*------MENU TRANSPARENTE------*/
+
+nav {
+  width: 100%;
+  position: fixed;
+  display: inline-block;
+  padding: 20px 0;
+  z-index: 1;
+  transition: 0.6s;
+}
+
+.logo img {
+  float: left;
+  width: 36px;
+  height: 36px;
+  margin-left: 100px;
+}
+
+.menu {
+  display: inline-block;
+  list-style: none;
+  float: right;
+  margin-right: 100px;
+  padding: 5px 0;
+}
+
+.menu-option {
+  display: inline-block;
+  margin: 0 10px;
+  transition: 0.6s;
+
+  a {
+    text-decoration: none;
+    color: $color-menu;
+    font-size: 14px;
+    font-weight: normal;
+
+    i {
+      font-size: 15px;
+      margin-right: 5px;
+    }
+  }
+}
+
+.btn-imp {
+  border: 1px solid $color-menu;
+  border-radius: 4px;
+  padding: 5px 5px;
+}
+
+/*-------MENU STIKY--------*/
+.sticky nav {
+  background-color: #ffffff;
+  padding: 20px 0;
+}
+
+.sticky .menu {
+  display: inline-block;
+  list-style: none;
+  float: right;
+  margin-right: 100px;
+  padding: 5px 0;
+}
+
+.sticky .menu-option {
+  display: inline-block;
+  margin: 0 10px;
+  transition: 0.6s;
+
+  a {
+    text-decoration: none;
+    color: $color-azul;
+    font-size: 14px;
+
+    i {
+      font-size: 15px;
+      margin-right: 5px;
+    }
+  }
+}
+
+.sticky .logo img {
+  width: 34px;
+  height: 34px;
+}
+
+.sticky .btn-imp {
+  border: 1px solid $color-azul;
+  border-radius: 4px;
+  padding: 5px 5px;
+}
+
+/*-----ENCABEZADO----*/
+.cont-index {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background: $color-azul;
+}
+
+.cont-encabezado {
+  width: 75%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 200px;
+}
+
+.title {
+  text-align: center;
+  color: $color-verde;
+  font-size: 100px;
+}
+
+.cont-parrafoo {
+  margin: 30px 200px;
+}
+
+.parrafoenc {
+  color: $color-menu;
+  text-align: center;
+  font-size: 25px;
+}
+
+.btn-encabezado {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  .btn-person,
+  .btn-helper {
+    margin: 20px 20px 0 20px;
+    text-decoration: none;
+    padding: 15px 50px;
+    font-size: 25px;
+    border-radius: 5px;
+    color: $color-azul;
+  }
+
+  .btn-person {
+    background-color: $color-menu;
+    &:hover {
+      box-shadow: 0px 0px 10px rgba($color: #fff, $alpha: 0.5);
+    }
+  }
+
+  .btn-helper {
+    background-color: $color-verde;
+    &:hover {
+      box-shadow: 0px 0px 10px rgba($color: $color-verde, $alpha: 0.5);
+    }
+  }
+}
+
+/*modal*/
+
+.bg-modal {
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.modal-contents {
+  padding: 30px 0;
+  background: #fff;
+  position: relative;
+  top: 30px;
+  width: 600px;
+  max-width: 600px;
+  height: 68%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.2);
+}
+
+.form-modal-person {
+  width: 100%;
+  height: 100%;
+}
+
+.modalimp {
+  margin: 14px 0;
+  font-size: 20px;
+  width: 90%;
+  height: 60px;
+  border-radius: 4px;
+  border: 1px solid gray;
+  padding: 20px;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 42px;
+  color: #333;
+  transform: rotate(45deg);
+  cursor: pointer;
+  &:hover {
+    color: #666;
+  }
+}
+
+.buttonmodal {
+  text-decoration: none;
+  position: relative;
+  top: 30px;
+  background-color: $color-azul;
+  padding: 10px 50px;
+  font-size: 20px;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  &:hover {
+    background-color: #fff;
+    border: 1px solid $color-azul;
+    color: $color-azul;
+    transition: all 0.5s;
+  }
+}
+
+.plogin-modal {
+  position: relative;
+  top: 55px;
+  color: $color-azul;
+}
+
+/*-----CONTENEDOR DE INFORMACIÓN-----*/
+
+.seccion-info {
+  width: 100%;
+  position: relative;
+  background: $color-menu;
+  padding-bottom: 40px;
+}
+
+.tit-info-hp {
+  margin: 100px 0 50px 0;
+  text-align: center;
+  color: $color-azul;
+  font-size: 55px;
+}
+
+.info-parrafo {
+  text-align: center;
+  margin: 0 100px;
+  font-size: 25px;
+  color: $color-azul;
+}
+
+.icon-container-info {
+  margin: auto;
+  width: 80%;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(400px, 1fr)) [auto-fill];
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  align-self: flex-start;
+}
+
+.cont-card-info {
+  align-self: center;
+  padding: 0 20px;
+  position: relative;
+  width: 400px;
+  height: 100%;
+  margin-top: 20px;
+
+  img {
+    display: grid;
+    width: 100px;
+    margin: auto;
+  }
+
+  h3 {
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    margin: 15px 0;
+  }
+
+  p {
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+.cta-cont {
+  background-color: $color-menu;
+  top: 40px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.calltoact {
+  text-align: center;
+  text-decoration: none;
+  background: $color-verde;
+  color: $color-azul;
+  padding: 20px 60px;
+  font-size: 25px;
+  border-radius: 5px;
+  &:hover {
+    box-shadow: 0px 0px 20px rgba($color: $color-verde, $alpha: 0.8);
+  }
+}
+
+/*--------RESEÑAS----------*/
+
+.resenas-help {
+  position: relative;
+  top: 50px;
+  width: 100%;
+  height: 100%;
+  background-color: $color-azul;
+}
+
+.cont-resen {
+  position: relative;
+  top: 100px;
+  background-color: $color-azul;
+  padding-bottom: 80px;
+}
+
+.tit-resenas {
+  margin: 50px 0 100px 0;
+  text-align: center;
+  color: $color-menu;
+  font-size: 40px;
+}
+
+.img-resenas-cont {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 350px);
+  grid-gap: 40px;
+  justify-content: center;
+}
+
+.resena-img {
+  width: 350px;
+}
+
+/*-----FOOTER------*/
+
+.footer-hijo {
+  top: 140px;
+  display: inline-block;
+  background-color: white;
+  padding: 29px 0 22px 0;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+
+  a {
+    float: left;
+    margin-left: 100px;
+    text-decoration: none;
+    color: $color-azul;
+  }
+
+  .social {
+    text-decoration: none;
+    font-size: 20px;
+    float: right;
+    margin-right: 100px;
+    color: $color-azul;
+  }
+}
+
+/*TODO:--------SOLO PARA INGRESO DE SESION------*/
+
+@import "styles/signinpages";
+
+/*TODO:--------SOLO PARA INGRESO DE SESION------*/
+
+/*RESPONSIVE*/
+@import "styles/responsive";

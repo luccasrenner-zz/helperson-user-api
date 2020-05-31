@@ -1,0 +1,592 @@
+/*---------VARIABLES--------*/
+
+$color-menu: #ffffff;
+$color-azul: #22263d;
+$color-verde: #3de200;
+
+@media (max-width: 1440px) {
+  .icon-container-info {
+    margin: auto;
+    width: 80%;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: minmax(300px, 1fr) [auto-fill];
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    align-self: flex-start;
+  }
+
+  .cont-card-info {
+    align-self: center;
+    padding: 0 20px;
+    position: relative;
+    height: 100%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .img-resenas-cont {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 350px);
+    grid-gap: 40px;
+    justify-content: center;
+  }
+
+  .cont-encabezado {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 100px;
+  }
+
+  .cont-parrafoo {
+    margin: 30px 50px;
+  }
+
+  .icon-container-info {
+    margin: auto;
+    width: 80%;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: minmax(273px, 1fr) [auto-fill];
+    grid-template-columns: repeat(auto-fill, minmax(273px, 1fr));
+    align-self: flex-start;
+  }
+
+  .cont-card-info {
+    align-self: center;
+    padding: 0 20px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+  }
+
+  img {
+    display: grid;
+    width: 60px;
+    margin: auto;
+  }
+}
+
+label #bars,
+label #cancel {
+  font-size: 24px;
+  color: $color-verde;
+  float: right;
+  margin-right: 16px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+/*ESTILOS ADAPTABLES A TABLET A PARTIR DE 800px*/
+
+@media (max-width: 900px) {
+  /*MENU RESPONSIVE NAVBAR HAMBURGER*/
+
+  nav {
+    background-color: $color-azul;
+    padding: 22px 0 22px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+  }
+
+  .logo img {
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin-left: 16px;
+  }
+
+  label #bars {
+    display: block;
+  }
+
+  .menu {
+    position: fixed;
+    width: 100%;
+    height: 224px;
+    background-color: $color-menu;
+    padding-left: 16px;
+    top: 68px;
+    left: -110%;
+    text-align: left;
+    transition: all 0.5s;
+  }
+
+  .menu li {
+    display: block;
+    padding: 12px 0;
+  }
+
+  .menu a {
+    text-decoration: none;
+    color: $color-azul;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 28px;
+  }
+
+  .btn-imp {
+    border: 1px solid $color-azul;
+    border-radius: 4px;
+    padding: 5px 5px;
+  }
+
+  /*sticky*/
+
+  .sticky nav {
+    background-color: $color-azul;
+    padding: 22px 0 22px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+  }
+
+  .sticky .logo img {
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin-left: 16px;
+  }
+
+  label #bars {
+    display: block;
+  }
+
+  .sticky .menu {
+    position: fixed;
+    width: 100%;
+    height: 224px;
+    background-color: $color-menu;
+    padding-left: 16px;
+    top: 68px;
+    left: -110%;
+    text-align: left;
+    transition: all 0.5s;
+  }
+
+  .sticky .menu li {
+    display: block;
+    padding: 12px 0;
+  }
+
+  .sticky .menu a {
+    text-decoration: none;
+    color: $color-azul;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 28px;
+  }
+
+  .btn-imp {
+    border: 1px solid $color-azul;
+    border-radius: 4px;
+    padding: 5px 5px;
+  }
+
+  #check:checked ~ .menu {
+    left: 0;
+  }
+
+  #check:checked ~ label #bars {
+    display: none;
+  }
+
+  #check:checked ~ label #cancel {
+    display: block;
+  }
+  /*-----ENCABEZADO-----*/
+
+  .cont-index {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background: $color-azul;
+  }
+
+  .cont-encabezado {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 100px;
+  }
+
+  .title {
+    text-align: center;
+    color: $color-verde;
+    font-size: 50px;
+  }
+
+  .cont-parrafoo {
+    margin: 30px 50px;
+  }
+
+  .parrafoenc {
+    color: $color-menu;
+    text-align: center;
+    font-size: 25px;
+  }
+
+  .btn-encabezado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .btn-person,
+    .btn-helper {
+      text-align: center;
+      width: 100%;
+      margin: 20px 0 0 0;
+      text-decoration: none;
+      padding: 15px 50px;
+      font-size: 25px;
+      border-radius: 5px;
+      color: $color-azul;
+    }
+
+    .btn-person {
+      background-color: $color-menu;
+    }
+
+    .btn-helper {
+      background-color: $color-verde;
+    }
+  }
+
+  /*----FIN ENCABEZADO-----*/
+
+  /*-----INFORMACION-----*/
+  .seccion-info {
+    width: 100%;
+    position: relative;
+    background: $color-menu;
+    padding-bottom: 40px;
+  }
+
+  .tit-info-hp {
+    margin: 100px 0 50px 0;
+    text-align: center;
+    color: $color-azul;
+    font-size: 45px;
+  }
+
+  .info-parrafo {
+    text-align: center;
+    margin: 0 100px;
+    font-size: 25px;
+    color: $color-azul;
+  }
+
+  .icon-container-info {
+    margin: auto;
+    width: 90%;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(400px, 1fr)) [auto-fill];
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    align-self: flex-start;
+  }
+
+  .cont-card-info {
+    align-self: center;
+    padding: 0 20px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+
+    img {
+      display: grid;
+      width: 100px;
+      margin: auto;
+    }
+
+    h3 {
+      font-weight: bold;
+      font-size: 25px;
+      text-align: center;
+      margin: 15px 0;
+    }
+
+    p {
+      font-size: 20px;
+      text-align: center;
+    }
+  }
+
+  .cta-cont {
+    background-color: $color-menu;
+    top: 40px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .calltoact {
+    text-align: center;
+    text-decoration: none;
+    background: $color-verde;
+    color: $color-menu;
+
+    padding: 20px 60px;
+    font-size: 25px;
+    border-radius: 5px;
+  }
+
+  /*-----FIN INFO------*/
+
+  /*--------RESEÑAS----------*/
+
+  .tit-resenas {
+    margin: 50px 0 100px 0;
+    text-align: center;
+    color: $color-menu;
+    font-size: 30px;
+  }
+
+  .img-resenas-cont {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 250px);
+    grid-gap: 40px;
+    justify-content: center;
+  }
+
+  .resena-img {
+    width: 250px;
+  }
+
+  /*foooooooter*/
+  .footer-hijo {
+    top: 140px;
+    display: inline-block;
+    background-color: white;
+    padding: 29px 0 22px 0;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+
+    a {
+      float: left;
+      margin-left: 40px;
+      text-decoration: none;
+      color: $color-azul;
+    }
+
+    .social {
+      text-decoration: none;
+
+      font-size: 20px;
+      float: right;
+      margin-right: 40px;
+      color: $color-azul;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .img-resenas-cont {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(1, 300px);
+    grid-gap: 40px;
+    justify-content: center;
+  }
+
+  .resena-img {
+    width: 300px;
+  }
+}
+
+@media (max-width: 440px) {
+  .cont-encabezado {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 10px;
+  }
+  .title {
+    margin-top: 39px;
+  }
+  .cont-parrafoo {
+    margin: 30px 10px;
+  }
+
+  .btn-person,
+  .btn-helper {
+    text-align: center;
+    width: 100%;
+    margin: 20px 0 0 0;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    color: $color-azul;
+  }
+
+  /*infoooo*/
+
+  .tit-info-hp {
+    margin: 80px 10px 25px 10px;
+    text-align: center;
+    color: $color-azul;
+    font-size: 30px;
+  }
+
+  .info-parrafo {
+    text-align: center;
+    margin: 0 10px;
+    font-size: 18px;
+    color: $color-azul;
+  }
+
+  .icon-container-info {
+    margin: auto;
+    width: 80%;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(200px, 1fr)) [auto-fill];
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    align-self: flex-start;
+  }
+  .cont-card-info {
+    align-self: center;
+    padding: 0 20px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 20px 0;
+  }
+
+  .cta-cont {
+    background-color: $color-menu;
+    top: 10px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .calltoact {
+    text-align: center;
+    text-decoration: none;
+    background: $color-verde;
+    color: $color-menu;
+
+    padding: 20px 40px;
+    font-size: 20px;
+    border-radius: 5px;
+  }
+
+  .footer-hijo {
+    top: 140px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 29px 0 22px 0;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+
+    a {
+      text-align: center;
+      float: none;
+      margin: auto;
+      text-decoration: none;
+      color: $color-azul;
+    }
+
+    .social {
+      text-decoration: none;
+      text-align: center;
+      font-size: 20px;
+      float: none;
+      margin: auto;
+      margin-top: 10px;
+      color: $color-azul;
+
+      i {
+        margin: 0 15px;
+      }
+    }
+  }
+}
+
+/*--------SIGN IN PAGE-------*/
+
+@media (max-width: 470px) {
+  /*MODAL*/
+
+  .modal-contents {
+    margin: 0 10px;
+    padding: 30px 0;
+    background: #fff;
+    position: relative;
+    top: 30px;
+    width: 600px;
+    max-width: 600px;
+    height: 78%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.2);
+  }
+
+  .hdlogin {
+    margin-top: 5px;
+  }
+
+  .contenedor-form {
+    background: #fff;
+    width: 95%;
+    border-radius: 5px;
+  }
+
+  .form h3 {
+    font-size: 25px;
+  }
+  .form {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .email,
+  .password {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .sub-btn {
+    width: 100%;
+  }
+}

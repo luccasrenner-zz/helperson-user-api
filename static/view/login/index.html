@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LogIn</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,700;1,200&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/e0d9b10ad3.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="bdlogin">
+    <header class="hdlogin">
+      <a href="/"
+        ><img class="logocuenta" src="images/logo-icon.svg" alt=""
+      /></a>
+      <div class="contenedor-form">
+        <form class="form" id="login-submit">
+          <h3>Iniciar Sesión</h3>
+          <div>
+            <input
+              class="email"
+              type="email"
+              id="login-email"
+              name="mail"
+              placeholder="Email"
+              required
+            />
+          </div>
+          <div>
+            <input
+              class="password"
+              type="password"
+              id="login-password"
+              placeholder="Contraseña"
+            />
+          </div>
+          <input class="sub-btn" type="submit" value="Ingresar" />
+          <p class="plogin">
+            ¿Es la primera vez que ingresas?
+            <a href="newAccount">Crea una cuenta</a>
+          </p>
+        </form>
+      </div>
+    </header>
+
+    <script src="dist/bundle.js"></script>
+  </body>
+</html>
